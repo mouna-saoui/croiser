@@ -80,7 +80,7 @@ function displaydata() {
              <img src=${object.img} alt="${object.name}" class="w-[50px] h-[50px] rounded-[50px]">
                <div class="info" >    
         <p><strong>Nom :</strong> ${object.name}</p>
-        <p><strong>Rôle :</strong> ${object.role}</p>
+        <p class ="ppp"><strong>Rôle :</strong> ${object.role}</p>
     </div>
 
          `
@@ -117,7 +117,6 @@ let addForm = document.getElementById("addForm");
 // Ajouter un nouvel employé
 function add() {
     console.log("add function")
-    let id = index++
     let name = document.querySelector("#nom").value;
     let role = document.querySelector("#role").value;
     let email = document.querySelector("#email").value;
@@ -593,3 +592,48 @@ function afficherProfile(object) {
 
     
 }
+let people = [
+    {
+        fname: "Ahmed",
+        salary: 5000.50,
+        age: 30,
+        email: "ahmed@example.com",
+        role: "admin"
+    },
+    {
+        fname: "Fatima Ezzahrae",
+        salary: 6000.75,
+        age: 28,
+        email: "fatima@example.com",
+        role: "cme"
+    },
+    {
+        fname: "Said",
+        salary: 4500.30,
+        age: 35,
+        email: "said@example.com",
+        role: "formateur"
+    },
+    {
+        fname: "Mariam",
+        salary: 5200.00,
+        age: 32,
+        email: "mariam@example.com",
+        role: "admin"
+    },
+    {
+        fname: "Omar",
+        salary: 4800.40,
+        age: 27,
+        email: "omar@example.com",
+        role: "formateur"
+    },
+    {
+        fname: "Amina",
+        salary: 5500.60,
+        age: 29,
+        email: "amina@example.com",
+        role: "cme"
+    }
+];
+console.log(people)

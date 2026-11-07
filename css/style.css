@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+form {
+    overflow: scroll;
+}
+
+form * {
+    display: flex;
+    padding: 30px;
+
+}
+
+
+.hero * {
+    z-index: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    position: relative;
+    background-color: rgba(58, 172, 172, 0.24);
+
+}
+
+.worker {
+    background-color: rgb(219, 189, 247);
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: rgb(176, 253, 172) 5px 15px 30px;
+
+}
+
+.worker .info p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add {
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(51, 143, 80);
+}
+
+.all {
+    background-color: rgb(137, 250, 106);
+}
+
+
+.element {
+    background-color: rgb(43, 76, 226);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding: 15px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.element * {
+    display: flex;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+.room {
+    background-color: rgb(129, 238, 202);
+    color: #ffff;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: #fda1c9 5px 5px 30px;
+}
+
+.info {
+    background-color: #fda1c9;
+    width: 500px;
+}
+
+label {
+    border-radius: 20px;
+}
+
+.ajouter {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    padding: 10px;
+    background: rgb(245, 9, 9);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 100;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section {
+
+    position: relative;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 150px;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.room {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.all {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.all:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+
+.content {
+    flex-grow: 1;
+}
+
+
+
+.ajouter.active {
+    right: 0;
+}
+
+.arrier {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+}
+
+.arrier.active {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(6, 150px) !important;
+        gap: 15px;
+    }
+
+    .section {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(6, 150px) !important;
+    }
+
+    .ajouter {
+        max-width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .employes {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .room {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+}
